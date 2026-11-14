@@ -1,0 +1,257 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Aluno{
+    std::string Nome;
+    int Idade;
+    float Nota;
+    
+};
+
+
+int main(){
+
+struct Aluno dados;
+
+
+    std::cout<<"Digite o nome do estudante:";
+    std::getline(std::cin, dados.Nome);
+    
+    std::cout<<"Digite a idade do estudante:";
+    std::cin >> dados.Idade;
+    
+    
+    std::cout<<"Digite a Nota do aluno:";
+    std::cin >> dados.Nota;
+    
+    
+    std::cout <<"Nome:" << dados.Nome << "\n";
+    std::cout <<"Idade:" << dados.Idade << "\n";
+    std::cout <<"Nota Final:" << dados.Nota << "\n";
+
+    return 0;
+}
+
+
+
+
+
+
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Pessoa{
+    std::string Nome;
+    int Idade;
+    float Altura;
+    
+};
+
+
+int main(){
+
+struct Pessoa dados;
+
+
+    std::cout<<"Digite o nome:";
+    std::getline(std::cin, dados.Nome);
+    
+    std::cout<<"Digite a idade";
+    std::cin >> dados.Idade;
+    
+    
+    std::cout<<"Digite a altura";
+    std::cin >> dados.Altura;
+    
+    
+    std::cout <<"Nome:" << dados.Nome <<"\n";
+    std::cout <<"Idade:" << dados.Idade <<"\n";
+    std::cout <<"Altura:" << dados.Altura <<"\n";
+    
+    
+    
+    
+
+    return 0;
+}
+
+
+
+
+
+
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Pessoa{
+    std::string Nome;
+    float Nota;
+    
+};
+
+
+int main(){
+
+struct Pessoa dados;
+
+
+    std::cout<<"Digite o nome:";
+    std::getline(std::cin, dados.Nome);
+    
+    std::cout<<"Digite a nota:";
+    std::cin >> dados.Nota;
+    
+    
+    if (dados.Nota <= 7){
+        std::cout <<"Nome:" << dados.Nome <<"\n";
+        std::cout <<"Reprovado:" << dados.Nota <<"\n";
+    }else{
+        std::cout <<"Nome:" << dados.Nome <<"\n";
+        std::cout <<"Aprovado:" << dados.Nota <<"\n";
+        
+    }
+    
+
+    return 0;
+}
+
+
+
+
+
+
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Pessoa{
+    std::string Nome;
+    int Numero;
+    float Saldo = 0.0f;
+    int opcoes = 0;
+    float Deposito;
+    float Saque;
+
+    
+    
+};
+
+
+int main(){
+
+struct Pessoa dados;
+
+
+    std::cout<<"Cadastre sua conta \n";
+    
+    std::cout<<"Digite o nome:";
+    std::getline(std::cin, dados.Nome);
+    
+    std::cout<<"Digite um numero para a conta:";
+    std::cin >> dados.Numero;
+    
+   while(dados.opcoes != 4){
+
+    std::cout<<"Opções:\n";
+    std::cout<<"1. depositar um valor\n";
+    std::cout<<"2. sacar um valor\n";
+    std::cout<<"3. verificar saldo\n";
+    std::cout<<"4. sair\n";
+    
+    std::cin >> dados.opcoes;
+    
+    
+    if(dados.opcoes == 1){
+        std::cout<<"Qual valor deseja depositar?";
+        std::cin >> dados.Deposito;
+        dados.Saldo += dados.Deposito;
+        std::cout<<"\n";
+    }else if(dados.opcoes == 2){
+        std::cout<<"Qual valor deseja sacar?";
+        std::cin >> dados.Saque;
+        dados.Saldo -= dados.Saque;
+        std::cout<<"\n";
+        
+    }else if(dados.opcoes == 3) {
+            // Corrigido para mostrar o saldo de forma limpa e organizada
+            std::cout << "\n--- Status da Conta ---\n";
+            std::cout << "Titular: " << dados.Nome << "\n";
+            std::cout << "Saldo atual: R$ " << dados.Saldo << "\n";
+            std::cout<<"\n";
+            
+        } else if(dados.opcoes == 4) {
+            std::cout << "Saindo... Ate logo!\n";
+        
+        }
+    
+    
+
+
+   };
+    
+   
+   
+    
+    
+    
+    
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
