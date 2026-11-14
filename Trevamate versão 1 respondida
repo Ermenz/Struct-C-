@@ -1,0 +1,60 @@
+
+#include <iostream>
+#include <string>
+#include <utility>
+#include <vector>
+
+int main() {
+
+    std::vector<std::pair<std::string, int>> pessoas;
+
+    int quantidade;
+    int galho;
+
+    bool tragedia = false;
+
+    std::cin >> quantidade;
+
+    for (int i = 0; i < quantidade; i++) {
+
+        std::pair<std::string, int> pessoa;
+
+        std::cin >> pessoa.first;
+        std::cin >> pessoa.second;
+
+        pessoas.push_back(pessoa);
+    }
+
+    std::cin >> galho;
+
+    std::vector<bool> causadores(quantidade, false);
+
+    for (int i = 0; i < quantidade; i++) {
+
+    if (pessoas[i].second > galho) {
+
+        tragedia = true;
+
+        causadores[i] = true;
+    }
+        }
+        
+    if (tragedia) {
+
+        std::cout << "Vamos virar almoço de aranhas gigantes!\n";
+
+        for (int i = 0; i < quantidade; i++) {
+
+            if (causadores[i]) {
+                std::cout << pessoas[i].first << "\n";
+            }
+        }
+
+    } else {
+
+        std::cout << "Vamos todos encontrar a montanha!\n";
+
+    }
+
+    return 0;
+}
