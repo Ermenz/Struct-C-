@@ -1,0 +1,40 @@
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n, c;
+    cin >> n;
+
+    vector<string> vitimas;
+    vector<pair<string, int>> amigos;
+
+    for (int i = 0; i < n; i++) {
+        string nome;
+        int peso;
+
+        cin >> nome >> peso;
+        amigos.push_back({nome, peso});
+    }
+
+    cin >> c;
+
+    for (auto amigo : amigos) {
+        if (amigo.second > c) {
+            vitimas.push_back(amigo.first);
+        }
+    }
+
+    if (vitimas.empty()) {
+        cout << "Vamos todos encontrar a montanha!" << endl;
+    } else {
+        cout << "Vamos virar almoço de aranhas gigantes!" << endl;
+
+        for (string nome : vitimas) {
+            cout << nome << endl;
+        }
+    }
+
+    return 0;
+}
